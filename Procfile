@@ -1,1 +1,1 @@
-web: gunicorn server:app --log-file -
+web: gunicorn -k flash-sockets.worker server:app
