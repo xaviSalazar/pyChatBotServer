@@ -6,19 +6,16 @@
 </head>
 <body>
   <h1>Boost.Beast WebSocket Chat Client</h1>
-  <p>
-    <a href="http://www.boost.org/libs/beast">Boost.Beast</a>
-    <a href="http://www.boost.org/libs/beast/example/websocket/server/chat-multi">Source Code</a>
-  </p>
-  Server URI: <input class="draw-border" id="uri" size="47" value="ws://localhost:8080" style="margin-bottom: 5px;">
-  <button class="echo-button" id="connect">Connect</button>
-  <button class="echo-button" id="disconnect">Disconnect</button><br>
-  Your Name: <input class="draw-border" id="userName" size=47 style="margin-bottom: 5px;"><br>
-  <pre id="messages" style="width: 600px; height: 400px; white-space: normal; overflow: auto; border: solid 1px #cccccc; margin-bottom: 5px;"></pre>
-  <div style="margin-bottom: 5px;">
+  
+  Server URI: <input value="ws://localhost:8080">
+  <button  id="connect">Connect</button>
+  <button  id="disconnect">Disconnect</button><br>
+  Your Name: <input id="userName" ><br>
+  <pre id="messages"></pre>
+  <div >
     Message<br>
-    <input class="draw-border" id="sendMessage" size="74" value="">
-    <button class="echo-button" id="send">Send</button>
+    <input id="sendMessage"value="">
+    <button id="send">Send</button>
   </div>
   <script>
     var ws = null;
