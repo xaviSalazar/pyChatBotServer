@@ -25,8 +25,8 @@ import signal
 # Response message server
 async def server(websocket):
     async for message in websocket:
-        # answer = get_response(message)
-        answer = 'prueba envio'
+        answer = get_response(message)
+        # answer = 'prueba envio'
         await websocket.send(answer)
 
 async def main():
